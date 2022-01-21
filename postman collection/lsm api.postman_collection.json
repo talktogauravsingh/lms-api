@@ -1,0 +1,191 @@
+{
+	"variables": [],
+	"info": {
+		"name": "lsm api",
+		"_postman_id": "e1c89a95-cd20-530a-9d25-0dd5c900143d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Register",
+			"request": {
+				"url": "http://lms_api.test/api/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"first_name\" : 45,\n\"last_name\" : \"\",\n\"mobile\" : \"\",\n\"email\" : \"\",\n\"age\" : \"\",\n\"gender\" : \"\",\n\"city\" : \"\",\n\"password\" : \"test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"url": "http://lms_api.test/api/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\" : \"test@gmail.com\",\n\"password\" : \"test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book Create",
+			"request": {
+				"url": "http://lms_api.test/api/book/create",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bookName\" : \"Developer\",\n\t\"author\" : \"Gaurav\",\n\t\"coverImage\" : \"cover.png\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book Update",
+			"request": {
+				"url": "http://lms_api.test/api/book/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bookId\" : 2,\n\t\"author\" : \"Saurabh\",\n\t\"coverImage\" : \"book.png\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book Delete",
+			"request": {
+				"url": "http://lms_api.test/api/book/delete",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bookId\" : 3\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "buyBookOnRent",
+			"request": {
+				"url": "http://lms_api.test/api/buyBookOnRent",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\" : 3,\n\t\"bookId\" : 3,\n\t\"rentForDays\" : 3\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "returnBook",
+			"request": {
+				"url": "http://lms_api.test/api/returnRentedBook",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"rentId\": 2,\n\t\"returnBook\" : \"Y\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book getAll",
+			"request": {
+				"url": "http://lms_api.test/api/book/getAll",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bookName\" : \"Developer\",\n\t\"author\" : \"Gaurav\",\n\t\"coverImage\" : \"cover.png\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book Data By Id",
+			"request": {
+				"url": "http://lms_api.test/api/book/getAll/3",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bookName\" : \"Developer\",\n\t\"author\" : \"Gaurav\",\n\t\"coverImage\" : \"cover.png\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
